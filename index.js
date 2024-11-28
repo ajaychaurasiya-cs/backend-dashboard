@@ -8,7 +8,9 @@ const productsRouter = require('./routers/productsRouter');
 const app = express();
 app.use(bodyParser.json());
 
-
+app.get('/', (req, res) => {
+    res.send('products api running new deploy');
+});
 
 app.use("/api/v1",categoryRouter);
 app.use("/api/v1",productsRouter);
